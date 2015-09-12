@@ -11,6 +11,10 @@
 @interface WordsTableViewController ()
 
 @property (nonatomic, strong) NSArray *words;
+@property (nonatomic, strong) NSArray *call;
+@property (nonatomic, strong) NSArray *menu;
+
+
 
 @end
 
@@ -19,7 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.words = @[@"help", @"yo", @"Dag <3 Rachel", @"Jordan White"];
+    self.words = @[@"Please come to my location.", @"I'm being followed."];
+    self.menu = @[@"Call Help", @"Send Help", @"Information Hotlines", @"Recognize Depression"];
+    self.call = @[@"Please come to my location.", @"I'm being followed."];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -34,11 +40,6 @@
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
@@ -56,6 +57,13 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *string = [self.words objectAtIndex:indexPath.row];
+    NSLog(@"%@", string);
+    
+    [self.textDocumentProxy insertText:string];
+}
 
 /*
 // Override to support conditional editing of the table view.

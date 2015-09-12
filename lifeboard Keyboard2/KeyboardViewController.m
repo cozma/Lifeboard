@@ -47,6 +47,8 @@
     [self addChildViewController:self.wordsTableView];
     [self.view addSubview:self.wordsTableView.view];
     
+    self.wordsTableView.textDocumentProxy = self.textDocumentProxy;
+    
     
     
     // Perform custom UI setup here

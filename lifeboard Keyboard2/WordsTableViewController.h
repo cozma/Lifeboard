@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WordsTableViewController : UITableViewController
+@interface WordsTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property NSObject<UITextDocumentProxy> *textDocumentProxy;
 
 @end
