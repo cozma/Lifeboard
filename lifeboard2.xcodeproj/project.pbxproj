@@ -19,6 +19,7 @@
 		1BA634761BA4B1300054A040 /* lifeboard Keyboard2.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1BA6346D1BA4B12F0054A040 /* lifeboard Keyboard2.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1BA6347D1BA4B3F80054A040 /* WordsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA6347B1BA4B3F80054A040 /* WordsTableViewController.m */; };
 		1BA634801BA4B58E0054A040 /* Key.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA6347F1BA4B58E0054A040 /* Key.storyboard */; };
+		1BB1DFF91BA55560009CADF3 /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB1DFF81BA55560009CADF3 /* globe.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		1BA6347A1BA4B3F80054A040 /* WordsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsTableViewController.h; sourceTree = "<group>"; };
 		1BA6347B1BA4B3F80054A040 /* WordsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsTableViewController.m; sourceTree = "<group>"; };
 		1BA6347F1BA4B58E0054A040 /* Key.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Key.storyboard; sourceTree = "<group>"; };
+		1BB1DFF81BA55560009CADF3 /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		1BA6346E1BA4B12F0054A040 /* lifeboard Keyboard2 */ = {
 			isa = PBXGroup;
 			children = (
+				1BB1DFF81BA55560009CADF3 /* globe.png */,
 				1BA634711BA4B12F0054A040 /* KeyboardViewController.h */,
 				1BA634721BA4B1300054A040 /* KeyboardViewController.m */,
 				1BA6347F1BA4B58E0054A040 /* Key.storyboard */,
@@ -306,9 +309,11 @@
 					};
 					1BA634571BA4AD310054A040 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 					1BA6346C1BA4B12F0054A040 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 				};
 			};
@@ -362,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BB1DFF91BA55560009CADF3 /* globe.png in Resources */,
 				1BA634801BA4B58E0054A040 /* Key.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +589,8 @@
 		1BA634621BA4AD310054A040 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -590,6 +598,7 @@
 				INFOPLIST_FILE = "lifeboard Keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -597,9 +606,12 @@
 		1BA634631BA4AD310054A040 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "lifeboard Keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -607,6 +619,8 @@
 		1BA634781BA4B1300054A040 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -614,6 +628,7 @@
 				INFOPLIST_FILE = "lifeboard Keyboard2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -621,9 +636,12 @@
 		1BA634791BA4B1300054A040 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "lifeboard Keyboard2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -647,6 +665,7 @@
 				1BA634501BA4AD1D0054A040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BA634511BA4AD1D0054A040 /* Build configuration list for PBXNativeTarget "lifeboard2Tests" */ = {
 			isa = XCConfigurationList;
@@ -655,6 +674,7 @@
 				1BA634531BA4AD1D0054A040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BA634611BA4AD310054A040 /* Build configuration list for PBXNativeTarget "lifeboard Keyboard" */ = {
 			isa = XCConfigurationList;
@@ -663,6 +683,7 @@
 				1BA634631BA4AD310054A040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BA634771BA4B1300054A040 /* Build configuration list for PBXNativeTarget "lifeboard Keyboard2" */ = {
 			isa = XCConfigurationList;
@@ -671,6 +692,7 @@
 				1BA634791BA4B1300054A040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

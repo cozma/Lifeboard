@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xs3-ai-Tyv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -12,7 +12,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="BGB-p0-OXy">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f0s-Gf-boE">
+                                    <rect key="frame" x="20" y="8" width="560" height="29"/>
+                                    <segments>
+                                        <segment title="Call for Help"/>
+                                        <segment title="Send Help"/>
+                                        <segment title="Info Hotlines"/>
+                                        <segment title="Recognize Depression"/>
+                                    </segments>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="f0s-Gf-boE" secondAttribute="trailing" constant="20" id="6G7-es-cfJ"/>
+                                <constraint firstItem="f0s-Gf-boE" firstAttribute="leading" secondItem="BGB-p0-OXy" secondAttribute="leading" constant="20" id="KUz-Ab-AEC"/>
+                                <constraint firstAttribute="centerY" secondItem="f0s-Gf-boE" secondAttribute="centerY" id="Lbr-Fz-fA7"/>
+                            </constraints>
+                        </view>
+                        <tabBar key="tableFooterView" contentMode="scaleToFill" id="l9W-S0-gR2">
+                            <rect key="frame" x="0.0" y="110" width="600" height="49"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <items>
+                                <tabBarItem title="Next Keyboard" id="ig3-tN-5ig"/>
+                            </items>
+                        </tabBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="44" id="8z8-fE-L2v">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -27,6 +55,9 @@
                             <outlet property="delegate" destination="nT2-h9-m04" id="wli-1e-7wV"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="segmentedControl" destination="f0s-Gf-boE" id="DgR-Pz-hQN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbw-38-qZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myC-ND-JH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="655" y="176"/>
+            <point key="canvasLocation" x="657" y="166"/>
         </scene>
     </scenes>
 </document>

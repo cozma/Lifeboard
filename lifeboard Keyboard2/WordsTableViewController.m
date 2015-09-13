@@ -13,25 +13,53 @@
 @property (nonatomic, strong) NSArray *words;
 @property (nonatomic, strong) NSArray *call;
 @property (nonatomic, strong) NSArray *menu;
+@property (nonatomic, strong) NSArray *send;
+@property (nonatomic, strong) NSArray *info;
+@property (nonatomic, strong) NSArray *rd;
 
 
+
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end
 
 @implementation WordsTableViewController
 
+- (void)segmentedControlWasTapped {
+    //printf(self.segmentedControl.selectedSegmentIndex);
+    
+    
+    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.words = @[@"", @"Please come to my location.", @"I'm being followed."];
+    self.words = @[@"Please come to my location. Let me see how long this can get before it's too long.", @"I'm being followed.", @"Please come to my location.", @"Please come to my location."];
+    
     self.menu = @[@"Call Help", @"Send Help", @"Information Hotlines", @"Recognize Depression"];
-    self.call = @[@"", @"Please come to my location.", @"I'm being followed."];
+    
+    self.call = @[@"Please come to my location. Let me see how long this can get before it's too long.", @"I'm being followed.", @"Please come to my location.", @"Please come to my location."];
+    
+    self.send = @[@"Test", @"Second message", @"Please come to my location.", @"Please come to my location."];
+    
+    self.info = @[@"information", @"information message", @"Please come to my location.", @"Please come to my location."];
+    
+    self.rd = @[@"Everything will be ok.", @"You're not alone.", @"Please come to my location.", @"Please come to my location."];
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    
+    
+    
+    [self.segmentedControl addTarget:self action:@selector(segmentedControlWasTapped) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,8 +75,23 @@
 }
 
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    
+    if (self.segmentedControl.selectedSegmentIndex == 0){
+        self.words = self.call;
+    }
+    if (self.segmentedControl.selectedSegmentIndex == 1){
+        self.words = self.send;
+    }
+    if (self.segmentedControl.selectedSegmentIndex == 2){
+        self.words = self.info;
+    }
+    if (self.segmentedControl.selectedSegmentIndex == 3){
+        self.words = self.rd;
+    }
     
     // Configure the cell...
     NSString *str = [self.words objectAtIndex:indexPath.row];
@@ -56,6 +99,12 @@
     
     return cell;
 }
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return self.menu[self.segmentedControl.selectedSegmentIndex];
+}
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     

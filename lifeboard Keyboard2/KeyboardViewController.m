@@ -52,7 +52,7 @@
 //    CGRect rect = CGRectMake(0, 0, 500, 400);
     
     
-    NSString *category = @"Call for Help";
+    //NSString *category = @"Call for Help";
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Key" bundle:nil];
     self.wordsTableView = [storyboard instantiateViewControllerWithIdentifier:@"wordsTableView"];
@@ -61,52 +61,52 @@
     
     self.wordsTableView.textDocumentProxy = self.textDocumentProxy;
     
-    //Category Label
-    CGRect label = CGRectMake(0, 0, 500, 30);
-    self.topLabel = [[UIButton alloc]initWithFrame:label];
-    self.topLabel.backgroundColor = [UIColor redColor];
-    self.topLabel.titleLabel.adjustsFontSizeToFitWidth = YES;
-    self.topLabel.titleLabel.text = category;
-    [self.view addSubview:self.topLabel];
+//    //Category Label
+//    CGRect label = CGRectMake(0, 0, 500, 30);
+//    self.topLabel = [[UIButton alloc]initWithFrame:label];
+//    self.topLabel.backgroundColor = [UIColor redColor];
+//    self.topLabel.titleLabel.adjustsFontSizeToFitWidth = YES;
+//    self.topLabel.titleLabel.text = category;
+//    [self.view addSubview:self.topLabel];
     
-    //call button
-    CGRect rect1 = CGRectMake(110, 180, 40, 30);
-    self.callButton = [[UIButton alloc]initWithFrame:rect1];
-    self.callButton.backgroundColor = [UIColor redColor];
-    self.callButton.titleLabel.adjustsFontSizeToFitWidth = YES;
-    self.callButton.titleLabel.text = @"C";
-    [self.view addSubview:self.callButton];
-    
-    //send button
-    CGRect rect2 = CGRectMake(160, 180, 40, 30);
-    self.sendButton = [[UIButton alloc]initWithFrame:rect2];
-    self.sendButton.backgroundColor = [UIColor orangeColor];
-    self.sendButton.titleLabel.adjustsFontSizeToFitWidth = YES;
-    self.sendButton.titleLabel.text = @"S";
-    [self.view addSubview:self.sendButton];
-    
-    //info button
-    CGRect rect3 = CGRectMake(210, 180, 40, 30);
-    self.infoButton = [[UIButton alloc]initWithFrame:rect3];
-    self.infoButton.backgroundColor = [UIColor blueColor];
-    self.infoButton.titleLabel.adjustsFontSizeToFitWidth = YES;
-    self.infoButton.titleLabel.text = @"I";
-    [self.view addSubview:self.infoButton];
-    
-    //RD button
-    CGRect rect4 = CGRectMake(260, 180, 40, 30);
-    self.rdButton = [[UIButton alloc]initWithFrame:rect4];
-    self.rdButton.backgroundColor = [UIColor yellowColor];
-    self.rdButton.titleLabel.adjustsFontSizeToFitWidth = YES;
-    self.rdButton.titleLabel.text = @"RD";
-    [self.view addSubview:self.rdButton];
-    
+//    //call button
+//    CGRect rect1 = CGRectMake(110, 180, 40, 30);
+//    self.callButton = [[UIButton alloc]initWithFrame:rect1];
+//    self.callButton.backgroundColor = [UIColor redColor];
+//    self.callButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+//    self.callButton.titleLabel.text = @"C";
+//    [self.view addSubview:self.callButton];
+//    
+//    //send button
+//    CGRect rect2 = CGRectMake(160, 180, 40, 30);
+//    self.sendButton = [[UIButton alloc]initWithFrame:rect2];
+//    self.sendButton.backgroundColor = [UIColor orangeColor];
+//    self.sendButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+//    self.sendButton.titleLabel.text = @"S";
+//    [self.view addSubview:self.sendButton];
+//    
+//    //info button
+//    CGRect rect3 = CGRectMake(210, 180, 40, 30);
+//    self.infoButton = [[UIButton alloc]initWithFrame:rect3];
+//    self.infoButton.backgroundColor = [UIColor blueColor];
+//    self.infoButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+//    self.infoButton.titleLabel.text = @"I";
+//    [self.view addSubview:self.infoButton];
+//    
+//    //RD button
+//    CGRect rect4 = CGRectMake(260, 180, 40, 30);
+//    self.rdButton = [[UIButton alloc]initWithFrame:rect4];
+//    self.rdButton.backgroundColor = [UIColor yellowColor];
+//    self.rdButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+//    self.rdButton.titleLabel.text = @"RD";
+//    [self.view addSubview:self.rdButton];
+//    
     
     
     // Perform custom UI setup here
     self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
     
-    [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next Keyboard", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
+    [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
     [self.nextKeyboardButton sizeToFit];
     self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
     
@@ -117,6 +117,12 @@
     NSLayoutConstraint *nextKeyboardButtonLeftSideConstraint = [NSLayoutConstraint constraintWithItem:self.nextKeyboardButton attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
     NSLayoutConstraint *nextKeyboardButtonBottomConstraint = [NSLayoutConstraint constraintWithItem:self.nextKeyboardButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
     [self.view addConstraints:@[nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint]];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.wordsTableView.view.frame = self.view.frame;
 }
 
 - (void)didReceiveMemoryWarning {
