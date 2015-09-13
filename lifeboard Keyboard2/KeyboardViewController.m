@@ -106,7 +106,8 @@
     // Perform custom UI setup here
     self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
     
-    [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
+    [self.nextKeyboardButton setTitle:NSLocalizedString(@"                                                          Next Keyboard", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
+    
     [self.nextKeyboardButton sizeToFit];
     self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
     

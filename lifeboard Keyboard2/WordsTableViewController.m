@@ -16,6 +16,8 @@
 @property (nonatomic, strong) NSArray *send;
 @property (nonatomic, strong) NSArray *info;
 @property (nonatomic, strong) NSArray *rd;
+@property (nonatomic, strong) UITabBarItem *next;
+
 
 
 
@@ -35,9 +37,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+        
     self.words = @[@"Please come to my location. Let me see how long this can get before it's too long.", @"I'm being followed.", @"Please come to my location.", @"Please come to my location."];
-    
+        
     self.menu = @[@"Call Help", @"Send Help", @"Information Hotlines", @"Recognize Depression"];
     
     self.call = @[@"Please come to my location. Let me see how long this can get before it's too long.", @"I'm being followed.", @"Please come to my location.", @"Please come to my location."];
@@ -101,7 +103,20 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
     return self.menu[self.segmentedControl.selectedSegmentIndex];
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    //section text as a label
+    UILabel *lbl = [[UILabel alloc] init];
+    lbl.textAlignment = UITextAlignmentCenter;
+    
+    lbl.text = self.menu[self.segmentedControl.selectedSegmentIndex];
+    lbl.font = [UIFont boldSystemFontOfSize:18];
+    [lbl setBackgroundColor:[UIColor clearColor]];
+    
+    return lbl;
 }
 
 

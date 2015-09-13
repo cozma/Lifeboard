@@ -33,14 +33,6 @@
                                 <constraint firstAttribute="centerY" secondItem="f0s-Gf-boE" secondAttribute="centerY" id="Lbr-Fz-fA7"/>
                             </constraints>
                         </view>
-                        <tabBar key="tableFooterView" contentMode="scaleToFill" id="l9W-S0-gR2">
-                            <rect key="frame" x="0.0" y="110" width="600" height="49"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <items>
-                                <tabBarItem title="Next Keyboard" id="ig3-tN-5ig"/>
-                            </items>
-                        </tabBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="44" id="8z8-fE-L2v">
                                 <autoresizingMask key="autoresizingMask"/>
