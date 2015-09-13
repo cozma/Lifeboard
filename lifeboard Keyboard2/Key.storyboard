@@ -12,14 +12,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="8z8-fE-L2v">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="44" id="8z8-fE-L2v">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8z8-fE-L2v" id="4wf-R8-cB5">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="nT2-h9-m04" id="5U3-ET-dSM"/>
                             <outlet property="delegate" destination="nT2-h9-m04" id="wli-1e-7wV"/>
@@ -28,7 +30,27 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbw-38-qZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370" y="223"/>
+            <point key="canvasLocation" x="-8" y="263"/>
+        </scene>
+        <!--Keyboard View Controller-->
+        <scene sceneID="2AC-BI-PIQ">
+            <objects>
+                <viewController id="xs3-ai-Tyv" customClass="KeyboardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5xt-cf-flb"/>
+                        <viewControllerLayoutGuide type="bottom" id="vQd-Oq-1w4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mYY-7c-H7b">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.82063429045767333" blue="0.7681973711693606" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="myC-ND-JH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655" y="176"/>
         </scene>
     </scenes>
 </document>

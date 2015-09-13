@@ -3,7 +3,7 @@
 //  lifeboard2
 //
 //  Created by Dag Yeshiwas on 9/12/15.
-//  Copyright (c) 2015 Dag Yeshiwas. All rights reserved.
+//  Copyright (c) 2015 Apple, Jordan White, Dag Yeshiwas. All rights reserved.
 //
 
 #import "WordsTableViewController.h"
@@ -23,9 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.words = @[@"Please come to my location.", @"I'm being followed."];
+    self.words = @[@"", @"Please come to my location.", @"I'm being followed."];
     self.menu = @[@"Call Help", @"Send Help", @"Information Hotlines", @"Recognize Depression"];
-    self.call = @[@"Please come to my location.", @"I'm being followed."];
+    self.call = @[@"", @"Please come to my location.", @"I'm being followed."];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
