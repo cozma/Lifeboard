@@ -38,17 +38,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
         
-    self.words = @[@"Please come to my location. Let me see how long this can get before it's too long.", @"I'm being followed.", @"Please come to my location.", @"Please come to my location."];
+    self.words = @[@"", @"", @"", @"", @""];
         
-    self.menu = @[@"Call Help", @"Send Help", @"Information Hotlines", @"Recognize Depression"];
+    self.menu = @[@"Call For Help", @"Send Help To Someone", @"Information Hotlines", @"Recognize Depression", @""];
     
-    self.call = @[@"Please come to my location. Let me see how long this can get before it's too long.", @"I'm being followed.", @"Please come to my location.", @"Please come to my location."];
+    self.call = @[@"Please come to my location.", @"I'm being followed. Please come find me.", @"I feel my life is in danger. Please send help.", @"I can't get up. Can you come assist me?", @""];
     
-    self.send = @[@"Test", @"Second message", @"Please come to my location.", @"Please come to my location."];
+    self.send = @[@"Don't worry & stay calm. I'm calling for help.", @"Disaster Distress: 800-985-5990", @"Poison Control: 800-222-1222", @"Safe Shelter Hotline: 704-332-2513.", @""];
     
-    self.info = @[@"information", @"information message", @"Please come to my location.", @"Please come to my location."];
+    self.info = @[@"Suicide Hotline: 800-784-2433", @"Crisis Call Center: 800-273-8255", @"Distress Hotline: 780-482-HELP", @"Crisis Chatroom: http://crisischat.org/chat", @""];
     
-    self.rd = @[@"Everything will be ok.", @"You're not alone.", @"Please come to my location.", @"Please come to my location."];
+    self.rd = @[@"Everything will be ok!", @"You're not alone!", @"Check this out! https://twloha.com", @"I'm here for you.", @""];
 
     
     // Uncomment the following line to preserve selection between presentations.
