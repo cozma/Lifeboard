@@ -3,7 +3,7 @@
 //  lifeboard2
 //
 //  Created by Dag Yeshiwas on 9/12/15.
-//  Copyright (c) 2015 Apple, Jordan White, Dag Yeshiwas. All rights reserved.
+//  Copyright (c) 2015 Dag Yeshiwas. All rights reserved.
 //
 
 #import "WordsTableViewController.h"
